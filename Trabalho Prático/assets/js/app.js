@@ -1,4 +1,4 @@
-// Estrutura de dados JSON para os filmes
+
 const dados = {
     "filmes": [
         {
