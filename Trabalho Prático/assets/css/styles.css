@@ -17,7 +17,7 @@ body {
     padding-top: 70px;
 }
 
-/* Navbar */
+
 .navbar {
     background-color: var(--preto);
     border-bottom: 2px solid var(--vermelho);
@@ -73,7 +73,7 @@ body {
     color: var(--branco);
 }
 
-/* Seção de filmes */
+
 .filmes-section {
     background-color: var(--preto);
     padding: 4rem 0;
@@ -176,7 +176,7 @@ body {
     color: var(--branco);
 }
 
-/* Seção sobre */
+
 .sobre-section {
     background-color: var(--cinza-escuro);
     padding: 4rem 0;
@@ -201,7 +201,7 @@ body {
     border: 3px solid var(--vermelho);
 }
 
-/* Rodapé */
+
 .footer {
     background-color: var(--preto);
     border-top: 2px solid var(--vermelho);
@@ -220,7 +220,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* Responsividade */
+
 @media (max-width: 992px) {
     .filme-img {
         height: 300px;
