@@ -1,4 +1,4 @@
-/* Carrossel */
+
 .hero-carousel {
     height: 80vh;
     min-height: 500px;
@@ -117,7 +117,7 @@
     background-color: var(--cinza) !important;
 }
 
-/* Responsividade do carrossel */
+
 @media (max-width: 1200px) {
     .carousel-title {
         font-size: 2.2rem;
