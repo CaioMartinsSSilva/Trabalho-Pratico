@@ -1,0 +1,186 @@
+/* Carrossel */
+.hero-carousel {
+    height: 80vh;
+    min-height: 500px;
+    max-height: 800px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.carousel-item {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 100%);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    right: 10%;
+    text-align: left;
+    z-index: 10;
+    padding: 2rem;
+    background: rgba(26, 26, 26, 0.7);
+    border-left: 4px solid var(--vermelho);
+    border-radius: 8px;
+}
+
+.carousel-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--vermelho);
+    text-transform: uppercase;
+}
+
+.carousel-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--branco-fumaca);
+}
+
+.carousel-btn {
+    padding: 0.7rem 1.5rem;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-danger {
+    background-color: var(--vermelho);
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: var(--vermelho-escuro);
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    border-color: var(--branco-fumaca);
+    color: var(--branco-fumaca);
+}
+
+.btn-outline-light:hover {
+    background-color: transparent;
+    border-color: var(--branco);
+    color: var(--branco);
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--cinza-claro);
+    border: none;
+}
+
+.carousel-indicators .active {
+    background-color: var(--vermelho);
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    border: 2px solid var(--vermelho);
+    background-size: 50%;
+}
+
+.badge {
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+}
+
+.bg-dark {
+    background-color: var(--cinza) !important;
+}
+
+/* Responsividade do carrossel */
+@media (max-width: 1200px) {
+    .carousel-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-carousel {
+        height: 70vh;
+    }
+    
+    .carousel-title {
+        font-size: 2rem;
+    }
+    
+    .carousel-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-carousel {
+        height: 60vh;
+    }
+    
+    .carousel-caption {
+        bottom: 15%;
+        padding: 1.5rem;
+    }
+    
+    .carousel-title {
+        font-size: 1.8rem;
+    }
+    
+    .carousel-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-carousel {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .carousel-caption {
+        bottom: 10%;
+        left: 5%;
+        right: 5%;
+        padding: 1rem;
+    }
+    
+    .carousel-title {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-text {
+        display: none;
+    }
+    
+    .carousel-btn {
+        padding: 0.5rem 1rem;
+        margin-right: 0.5rem;
+    }
+}

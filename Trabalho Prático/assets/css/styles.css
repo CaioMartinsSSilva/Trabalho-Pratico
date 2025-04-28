@@ -1,0 +1,260 @@
+:root {
+    --vermelho-escuro: #8B0000;
+    --vermelho: #FF0000;
+    --vermelho-claro: #FF4D4D;
+    --preto: #000000;
+    --cinza-escuro: #1A1A1A;
+    --cinza: #333333;
+    --cinza-claro: #4D4D4D;
+    --branco: #FFFFFF;
+    --branco-fumaca: #F5F5F5;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--preto);
+    color: var(--branco-fumaca);
+    padding-top: 70px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--preto);
+    border-bottom: 2px solid var(--vermelho);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--vermelho);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: var(--vermelho-claro);
+}
+
+.nav-link {
+    color: var(--branco-fumaca);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--vermelho);
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--vermelho);
+    object-fit: cover;
+}
+
+.dropdown-menu {
+    background-color: var(--cinza-escuro);
+    border: 1px solid var(--vermelho);
+}
+
+.dropdown-item {
+    color: var(--branco-fumaca);
+}
+
+.dropdown-item:hover {
+    background-color: var(--cinza);
+    color: var(--branco);
+}
+
+/* Seção de filmes */
+.filmes-section {
+    background-color: var(--preto);
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--vermelho);
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--vermelho);
+}
+
+.filme-card {
+    background-color: var(--cinza-escuro);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--cinza);
+    margin-bottom: 2rem;
+}
+
+.filme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(139, 0, 0, 0.3);
+    border-color: var(--vermelho);
+}
+
+.filme-img {
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.filme-card:hover .filme-img {
+    transform: scale(1.03);
+}
+
+.filme-body {
+    padding: 1.5rem;
+}
+
+.filme-title {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--branco);
+}
+
+.filme-text {
+    color: var(--branco-fumaca);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.filme-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.filme-ano {
+    background-color: var(--vermelho);
+    color: white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.filme-avaliacao {
+    color: var(--branco);
+    font-weight: 600;
+}
+
+.filme-avaliacao .fa-star {
+    color: var(--vermelho);
+}
+
+.btn-outline-danger {
+    border-color: var(--vermelho);
+    color: var(--vermelho);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+
+/* Seção sobre */
+.sobre-section {
+    background-color: var(--cinza-escuro);
+    padding: 4rem 0;
+}
+
+.sobre-title {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--vermelho);
+    margin-bottom: 1.5rem;
+}
+
+.sobre-text {
+    color: var(--branco-fumaca);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border: 3px solid var(--vermelho);
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--preto);
+    border-top: 2px solid var(--vermelho);
+    padding: 2rem 0;
+}
+
+.footer-logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--vermelho);
+    margin-bottom: 1rem;
+}
+
+.footer-text {
+    color: var(--branco-fumaca);
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .filme-img {
+        height: 300px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .filme-img {
+        height: 250px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .sobre-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .filme-img {
+        height: 200px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
