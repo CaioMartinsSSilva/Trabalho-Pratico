@@ -1,4 +1,4 @@
-// Função para carregar os cards de filmes
+
 function carregarCardsFilmes() {
     const filmesContainer = document.getElementById('filmes-container');
     
@@ -30,7 +30,7 @@ function carregarCardsFilmes() {
     });
 }
 
-// Função para carregar os detalhes do filme
+
 function carregarDetalhesFilme() {
     const urlParams = new URLSearchParams(window.location.search);
     const filmeId = parseInt(urlParams.get('id'));
@@ -95,7 +95,7 @@ function carregarDetalhesFilme() {
     }
 }
 
-// Função para animar a navbar ao scroll
+
 function animarNavbar() {
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
@@ -107,7 +107,7 @@ function animarNavbar() {
     });
 }
 
-// Verificar qual página está sendo carregada
+
 document.addEventListener('DOMContentLoaded', function() {
     animarNavbar();
     
