@@ -1,16 +1,16 @@
-// assets/js/carousel.js
+
 function carregarCarrossel() {
     const carouselInner = document.getElementById('carousel-inner');
     const filmesDestaque = dados.filmes.filter(filme => filme.destaque);
 
-    // Limpa o carrossel antes de adicionar novos itens
+
     carouselInner.innerHTML = '';
 
     filmesDestaque.forEach((filme, index) => {
         const item = document.createElement('div');
         item.className = `carousel-item ${index === 0 ? 'active' : ''}`;
         
-        // Adiciona imagem de fundo diretamente no item
+    
         item.style.backgroundImage = `linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 100%), url('${filme.imagem_principal}')`;
         item.style.backgroundSize = 'cover';
         item.style.backgroundPosition = 'center';
@@ -43,7 +43,7 @@ function carregarCarrossel() {
         carouselInner.appendChild(item);
     });
 
-    // Inicializa o carrossel manualmente após adicionar os itens
+    
     const carousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
         interval: 5000,
         ride: 'carousel',
